@@ -27,6 +27,18 @@ body p {
     background-color: #8f6ee9;
     display: flex;
 }
+.logo { 
+    transform: translateX(-500%); 
+    animation: logomove 2.5s ease-out 1s 1 normal forwards; 
+    } 
+    @keyframes logomove { 
+    0% { 
+    transform: translateX(-500%) rotate(0); 
+    } 
+    100% { 
+    transform: translateX(0)rotate(360deg); 
+    } 
+    }
 .logo_text {
     display: flex;
     margin: 14px 0 0 0;
@@ -49,12 +61,32 @@ body p {
 .nav li {
     margin-left: 15px;
 }
+    @media (min-width:768px) {
+        .mobile_nav {
+            display: none;
+        }
+    }
     @media (max-width: 768px) {
         .nav {
-            display: grid;
-            grid-template-columns: 15px 15px 15px 15px 15px 15px 15px;
-            grid-template-rows: 15px 15px 15px 15px 15px 15px 15px;
-            margin-bottom: 15px;
+            display: none;
+        }
+        .mobile_nav {
+            float: right;
+            margin-top: -15%;
+            margin-right: 5%;
+        }
+        .mobile_nav button {
+            border-color: #05cec4;
+        }
+        .mobile_nav button   {
+            color: #00e0d0;
+        }
+        .mobile_nav button a {
+            color: black;
+            text-decoration: none;
+        }
+        .mobile_nav button a:focus {
+            color: purple;
         }
     }
 .list-inline-item a {
@@ -144,14 +176,11 @@ h1:after {
 .our_story_text {
     width: 645px;
 }
-/* @media (max-width:768px) {
-    .our_story_text h2 {
-        margin-left: 5%;
+@media (max-width:768px) {
+    .our_story_text p, h2 {
+        text-align: center;
     }
-    .our_story_text p {
-        margin-left: 3%;
-    }
-} */
+}
 .our_story_text h2 {
     padding: 0 0 12px 0;
     font-weight: bold;
@@ -178,16 +207,26 @@ h1:after {
 .our_story {
     padding-top: 70px;
 }
+.big_logo {
+    width: 150px;
+    
+}
 .big_logo img {
     margin-left: 150px;
 }
 @media (max-width: 768px) {
     .big_logo {
-        position: relative;
-        left: 15%;
+        /* position: relative;
+        left: 15%; */
+        float: none;
+        clear: left;
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
     }
     .big_logo img {
-        margin-left: 0;
+        margin-left: 60%;
+        width: 90%;
     }
 }
 .video {
