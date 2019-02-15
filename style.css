@@ -5,6 +5,9 @@ html {
 }
 
 /*specification*/
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -19,7 +22,6 @@ body p {
     color: #a5a2a2;
     font-size: 14px;
 }
-
 .hero_section {
     background-blend-mode: multiply;
     background:  #8f6ee9 url(images/bg-img.jpg) no-repeat center top / cover;
